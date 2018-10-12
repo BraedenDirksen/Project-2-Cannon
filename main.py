@@ -95,6 +95,7 @@ if scen == 1:
         speed = convint(inputs())
         print("how far above the water is the cannon?")
         height = convint(inputs())
+        print("the distance the cannon ball went is", scen1calc(speed, height))
 elif scen == 2:
         print("what is the speed of the cannon ball as it leaves the cannon?")
         speed = convint(inputs())
@@ -107,3 +108,5 @@ else:
         height = convint(inputs())
         print("what is the speed of the cannon ball as it leaves the cannon?")
         speed = convint(inputs())
+
+
