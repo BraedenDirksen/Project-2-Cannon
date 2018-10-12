@@ -9,6 +9,7 @@ def inputs():
 def convint(a):
     try:
         a = int(a)
+        return a
     except ValueError:
         print("please enter a correct value ")
-        return inputs()
+        return convint(a)
