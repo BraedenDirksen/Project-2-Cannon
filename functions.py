@@ -19,29 +19,25 @@ def convint(a):
 def scen1calc(a, b):
         time = ((b * 2) / 9.81) ** 0.5
         distance = time * a
-        return distance
+        return round(distance, 2)
 
 def scen2calc(a, b):
         speedh = (a * math.cos(math.radians(b)))
         speedv = (a * math.sin(math.radians(b)))
         heightpeak = (speedv ** 2) / 9.81
         timepeak = speedv / 9.81
-        timefall = ((heightpeak * 2) / 9.81) ** 0.5
-
-
-
-
-
+        totaldist = round(speedh * timepeak * 2, 2)
+        return totaldist
 
 def scen3calc(a, b, c):
         speedh = (a * math.cos(math.radians(b)))
         speedv = (a * math.sin(math.radians(b)))
-        heightpeak = (speedv ** 2) / 9.81
+        heightpeak = (speedv ** 2) / (9.81 * 2)
         timepeak = speedv / 9.81
         totalheight = heightpeak + c
         timefall = ((totalheight * 2) / 9.81) ** 0.5
         totaltime = timefall + timepeak
-        totaldist = speedh * totaltime
+        totaldist = round(speedh * totaltime, 2)
         return totaldist
 
 

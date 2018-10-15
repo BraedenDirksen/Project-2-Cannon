@@ -101,6 +101,7 @@ elif scen == 2:
         speed = convint(inputs())
         print("what is the angle of the cannon from the horizontal?")
         angle = convint(inputs())
+        print("the total distance to the boat is ", scen2calc(speed, angle))
 else:
         print("what is the angle of the cannon from the horizontal?")
         angle = convint(inputs())
