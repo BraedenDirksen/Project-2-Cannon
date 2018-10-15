@@ -108,5 +108,4 @@ else:
         height = convint(inputs())
         print("what is the speed of the cannon ball as it leaves the cannon?")
         speed = convint(inputs())
-
-
+        print("the distance the cannon ball travels would be", scen3calc(speed, angle, height))
