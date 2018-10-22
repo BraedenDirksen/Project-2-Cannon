@@ -1,14 +1,14 @@
 """
-title: functions
+title: functions for cannons
 """
 import math
 
 def inputs():
     return input()
 
-def convint(a):
+def convfloat(a):
     try:
-        a = int(a)
+        a = float(a)
         return a
     except ValueError:
         print("please enter a correct value ")
@@ -16,18 +16,22 @@ def convint(a):
 
 
 
-def scen1calc(a, b):
+def scen1calc(a, b, c, d):
         time = ((b * 2) / 9.81) ** 0.5
         distance = time * a
         return round(distance, 2)
 
-def scen2calc(a, b):
+def scen2calc(a, b, c):
         speedh = (a * math.cos(math.radians(b)))
         speedv = (a * math.sin(math.radians(b)))
         heightpeak = (speedv ** 2) / 9.81
         timepeak = speedv / 9.81
         totaldist = round(speedh * timepeak * 2, 2)
-        return totaldist
+        if totaldist == c:
+                hit = "you hit the other boat"
+        else:
+                hit = "you missed the other boat"
+        return totaldist, hit
 
 def scen3calc(a, b, c):
         speedh = (a * math.cos(math.radians(b)))
@@ -39,7 +43,5 @@ def scen3calc(a, b, c):
         totaltime = timefall + timepeak
         totaldist = round(speedh * totaltime, 2)
         return totaldist
-
-
 
 

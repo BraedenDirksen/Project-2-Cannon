@@ -27,8 +27,6 @@ _______|___|''''''''''|  o     o
 
 """)
 
-
-
 print("""
 
 
@@ -79,34 +77,30 @@ _______|____.'   .'____                             o       |
 
 
 
-
-
-
-
-
-
-
-
 ### code starts here ###
 print("which scenario do you want to do? ")
-scen = convint(inputs())
+scen = convfloat(inputs())
 if scen == 1:
         print("what is the speed of the cannon ball as it leaves the cannon?")
-        speed = convint(inputs())
+        speed = convfloat(inputs())
         print("how far above the water is the cannon?")
-        height = convint(inputs())
+        height = confloat(inputs())
         print("the distance the cannon ball went is", scen1calc(speed, height))
 elif scen == 2:
         print("what is the speed of the cannon ball as it leaves the cannon?")
-        speed = convint(inputs())
+        speed = convfloat(inputs())
         print("what is the angle of the cannon from the horizontal?")
-        angle = convint(inputs())
-        print("the total distance to the boat is ", scen2calc(speed, angle))
+        angle = convfloat(inputs())
+        print("how far is the boat from you")
+        distance = convfloat(inputs())
+        totaldistance, hit = scen2calc(speed, angle, distance)
+        print("the total distance the cannonball went is", totaldistance)
+        print(hit)
 else:
         print("what is the angle of the cannon from the horizontal?")
-        angle = convint(inputs())
+        angle = convfloat(inputs())
         print("how much taller is ur ship then the other ship?")
-        height = convint(inputs())
+        height = convfloat(inputs())
         print("what is the speed of the cannon ball as it leaves the cannon?")
-        speed = convint(inputs())
+        speed = convfloat(inputs())
         print("the distance the cannon ball travels would be", scen3calc(speed, angle, height))
