@@ -84,7 +84,7 @@ if scen == 1:
         print("what is the speed of the cannon ball as it leaves the cannon?")
         speed = convfloat(inputs())
         print("how far above the water is the cannon?")
-        height = confloat(inputs())
+        height = convfloat(inputs())
         print("the distance the cannon ball went is", scen1calc(speed, height))
 elif scen == 2:
         print("what is the speed of the cannon ball as it leaves the cannon?")
